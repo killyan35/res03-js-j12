@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>JS Vue</title>
+</head>
+
+<body>
+    <section id="app">
+        <h2>Taches</h2>
+        <ul>
+            <template v-for="tache in taches">
+            <li v-if="hasAttributes === false" class="line">
+                {{ tache }}
+            <li v-else="hasAttributes === true" class="">
+                {{ tache }}
+                
+                <form @submit.prevent="Done">
+                <button type="submit">Fait</button>
+                </form>
+            </li>
+            </template>
+        </ul>
+        <form @submit.prevent="addTache">
+            <fieldset>
+                <label for="tache">Saisir la tache</label>
+                <input type="text" name="tache" id="tache" />
+                
+            </fieldset>
+            <button type="submit">Ajouter</button>
+        </form>
+    </section>
+    
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

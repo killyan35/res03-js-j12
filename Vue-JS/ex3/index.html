@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <title>JS Vue</title>
+</head>
+<body>
+   <section id="app2">
+       
+    <ul id="app">
+        <template v-for="number in numbers">
+            <li v-if="number%2 === 0" class="blue">{{number}}</li>
+            <li v-else class="white">{{number}}</li>
+        </template>
+    </ul>
+    
+</section>
+<script type="module" src="index.js"></script>
+</body>
+</html>
